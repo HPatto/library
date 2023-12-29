@@ -2,20 +2,61 @@
     font-family: Consolas, Monaco, monospace;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, monaco, monospace; */
     /* font-weight: 600; */
+    box-sizing: border-box;
+
     --page-title: 28px;
+    --copyright: 20px;
     --button: 16px;
-    --book-title: 24px;
+    --book-title: 16px;
+    --book-author: 16px;
+}
+
+/* body {
+    height: 100vh;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px solid purple;
+    height: 98vh;
 }
 
 .header {
+    flex: 0 1 auto;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+    border: 3px solid gold;
+
     background-color: slategray;
     height: var(--page-title);
-    padding: 20px;
+    padding: calc(var(--page-title) * 0.8);
+    /* margin-top: 0px; */
+}
+
+.footer {
+    flex: 0 1 auto;
+    background-color: slategray;
+    border: 3px solid cyan;
+    height: var(--page-title);
+    padding: calc(var(--copyright) * 0.8);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+    /* margin-bottom: 0px; */
+}
+
+.disclaimer p,
+.credit p {
+    /* text-align: center; */
 }
 
 .header p {
@@ -26,3 +67,59 @@
     font-size: var(--button);
 }
 
+.content {
+    flex: 1 0 auto;
+    /* flex-grow: 1; */
+    padding: 70px;
+    border: 5px solid green;
+}
+
+.library {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border: 4px solid slategray;
+
+    /* padding: 100px 20px; */
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr; */
+
+    /* align-items: center; */
+
+    /* min-width: 120px; */
+    /* max-width: 160px; */
+
+    /* min-height: 100px; */
+    /* max-height: 200px; */
+
+    border: 3px solid slategray;
+}
+
+.book-title,
+.book-author,
+.book-pages,
+.book-read {
+    border: 2px solid red;
+    text-align: left;
+    /* font-size: fit-content; */
+}
+
+.book-title p {
+    font-size: var(--book-title);
+    margin: 0;
+    color: black;
+}
+
+.book-author p,
+.book-pages p,
+.book-read p {
+    font-size: var(--book-author);
+    margin: 0;
+    color: darkgray;
+}
