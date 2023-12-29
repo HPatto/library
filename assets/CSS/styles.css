@@ -1,0 +1,28 @@
+:root {
+    font-family: Consolas, Monaco, monospace;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, monaco, monospace; */
+    /* font-weight: 600; */
+    --page-title: 28px;
+    --button: 16px;
+    --book-title: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: slategray;
+    height: var(--page-title);
+    padding: 20px;
+}
+
+.header p {
+    font-size: var(--page-title);
+}
+
+.header button {
+    font-size: var(--button);
+}
+
