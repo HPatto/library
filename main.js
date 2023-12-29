@@ -69,45 +69,28 @@ this.document.addEventListener("DOMContentLoaded", function() {
     
     // Get the elements we want
     const libraryElement = document.querySelector('.library');
+    const addBook = document.querySelector('#add-book');
+
+    // Listen for an 'add-book' event
+    addBook.addEventListener('click', function (libraryElement) {
+        // Bring up the modal form
+
+        // Check that all is okay with the form
+
+        // Build a book object with that data
+        // const newBook = new Book();
+
+        // Send it to the screen via buildBookElements
+        // buildBookElements(libraryElement, newBook);
+
+    })
 
     // Get currently stored books
-    let numBooks = myLibrary.length;
+    // let numBooks = myLibrary.length;
 
     // For each book, create and build the necessary elements
-    for (let i = 0; i < numBooks; i++) {
-        buildBookElements(libraryElement, myLibrary[i]);
-
-        // Create a title element
-        /*
-        <div class="book-title">
-            <p>Harry Potter and the Prisoner of Azkerban</p>
-        </div>
-        */
-
-        // Create an author element
-        /*
-        <div class="book-author">
-            <p>Harry Potter and the Prisoner of Azkerban</p>
-        </div>
-        */
-
-        // Create a pagecount element
-        /*
-        <div class="book-pages">
-            <p>Harry Potter and the Prisoner of Azkerban</p>
-        </div>
-        */
-
-        // Create a read boolean
-
-        // Build the book element
-        /*
-        <div class="book">
-        */
-
-        // Add the book element to the library
-    }
-
-    // Display currently stored books
+    // for (let i = 0; i < numBooks; i++) {
+    //     buildBookElements(libraryElement, myLibrary[i]);
+    // }
 
 })
